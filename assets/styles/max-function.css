@@ -1,0 +1,64 @@
+.wrapper {
+  display: flex;
+  align-items: stretch;
+  height: 100vh;
+}
+
+.aside {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #182c5a;
+  text-align: center;
+  padding: 2rem;
+
+  /* width: 50vw;
+  max-width: 150px; */
+  
+  /**
+   * Maximum 150px, Below that 50vw
+   */
+  width: min(150px, 50vw);
+
+  /**
+   * Nesting with other CSS functions
+   */
+  width: min(max(100px, 50%), 50vw);
+
+  /**
+   * La función min() selecciona el valor más pequeño
+   * entre los argumentos proporcionados.
+   * 
+   * La función max() selecciona el valor más grande
+   * entre los argumentos proporcionados.
+   */
+
+  width: min(min(100px, 50%), 50vw);
+
+  /**
+   * Calc() function is not required.
+   * Following two are same.
+   */
+  width: min(calc(100px + 5%), 50vw);
+  width: min(100px + 5%, 50vw);
+
+  /**
+   * More than two arguments
+   */
+  width: min(22550px, 80vw, 50%);
+
+  /* flex-wrap: wrap; */
+  /* flex-basis: min(22550px, 80vw, 50%); */
+}
+
+.aside span {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  text-transform: uppercase;
+  color: white;
+}
+
+.content {
+  padding: 2rem;
+}
