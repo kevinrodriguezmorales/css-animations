@@ -4,6 +4,11 @@
   padding: 0;
 }
 
+html {
+  /* filter: invert(1); */
+  color-scheme: dark;
+}
+
 body {
   font-family: 'Courier New', Courier, monospace;
 }
