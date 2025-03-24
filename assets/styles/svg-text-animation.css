@@ -1,0 +1,76 @@
+:root {
+  --size-stroke: 170px;
+}
+
+.wrapper {
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.title {
+  position: absolute;
+  z-index: 1;
+}
+
+.wrapper::after,
+.wrapper::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  background-size: cover;
+  background-position: top;
+  transform: scale(1.5);
+  animation: bgZoomOut 4s ease-in-out 1 forwards;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.wrapper::before {
+  background-image: url('https://w.wallhaven.cc/full/zy/wallhaven-zyk6ko.jpg');
+  animation: bgZoomIn 4s ease-in-out 1 forwards;
+}
+
+.wrapper::after {
+  background-image: url('../images/after.png');
+  animation: bgZoomOut 4s ease-in-out 1 forwards;
+}
+
+@keyframes bgZoomIn {
+  from {
+    transform: scale(1.2);
+  } to {
+    transform: scale(1);
+  }
+}
+
+@keyframes bgZoomOut {
+  from {
+    transform: scale(1);
+  } to {
+    transform: scale(2);
+  }
+}
+
+svg path {
+  fill: transparent;
+  stroke: #fff;
+  stroke-width: 0.5;
+  stroke-dasharray: var(--size-stroke);
+  stroke-dashoffset: var(--size-stroke);
+  animation: textAnimation 5s ease-in-out forwards;
+}
+
+@keyframes textAnimation {
+  0% {
+    stroke-dashoffset: var(--size-stroke);
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
