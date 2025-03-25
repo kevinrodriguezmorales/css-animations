@@ -1,0 +1,36 @@
+:root {
+  --size-card: 300px;
+}
+
+html {
+  color-scheme: initial;
+}
+
+.wrapper { 
+  height: 100dvh;
+  width: 100dvw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e8e7ee;
+}
+
+.wrapper-card {
+  display: flex;
+  gap: 20px;
+  width: var(--size-card);
+  padding-bottom: 7px;
+
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+}
+
+.card {
+  scroll-snap-align: center;
+  padding: 20px 30px;
+  flex-shrink: 0;
+  width: var(--size-card);
+  background-color: white;
+  border-radius: 14px;
+  text-align: center;
+}
