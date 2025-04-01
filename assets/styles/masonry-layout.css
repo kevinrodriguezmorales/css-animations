@@ -1,0 +1,18 @@
+body {
+  background-color: #242223;
+}
+
+img {
+  width: 100%;
+  margin-bottom: 1em;
+}
+
+.masonry-images, .masonry-text {
+  height: fit-content;
+  width: 100vw;
+}
+
+.list, .box-text {
+  /* column-count: 3; */
+  columns: 300px
+}
