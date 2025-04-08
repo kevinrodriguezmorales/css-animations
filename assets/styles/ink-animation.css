@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+  font-family: Poppins;
+}
+
+.wrapper-main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  
+}
+
+.wrapper-main::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: url('https://w.wallhaven.cc/full/4d/wallhaven-4dgo3m.jpg');
+  background-position: center;
+  background-size: cover;
+
+  /* LVL 1 */
+  /* mask-image: url('../images/ink-animation/Ink-PNG.png'); */
+  mask-size: cover;
+  mask-position: center;
+  
+  /* LVL 2 */
+  mask-image: url('../images/ink-animation/ink-animation.gif');
+}
+
+/* LV 2 */
+/**
+ * Resources
+ * 
+ * Image: https://es.vecteezy.com/
+ * Video cutter tool: https://online-video-cutter.com/
+ * GIF converter: https://ezgif.com/
+ * * config:
+ * * * Frame rate (FPS): 33 (max 10 seconds)
+ * * * after convert:
+ * * * * custom (HEX): capture the color of the image
+ * * * * don't stack frames: 10
+ * * * after remove background:
+ * * * * more tools:
+ * * * * * Change loop count: 1
+ * */
+
+.wrapper-main h3 {
+  font-size: 4rem;
+}
+
+.wrapper-main span {
+  font-size: 2rem;
+}
